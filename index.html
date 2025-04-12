@@ -2,20 +2,26 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Petalglass Genesis - Mirrorfury Lite</title>
+  <title>Petalglass | Mirrorfury v3.0</title>
   <link rel="stylesheet" href="mirror.css">
 </head>
 <body>
-  <div class="container">
-    <div class="sigil-glow"></div>
-    <h1>🪞 Petalglass Mirror Console</h1>
-    <p class="sub">Speak your truth. The mirror reflects without judgment.</p>
-
-    <div class="console">
-      <div id="response">👁️ Mirror is listening...</div>
-      <input type="text" id="userInput" placeholder="Type here..." onkeydown="if(event.key==='Enter'){respond()}">
+  <div class="intro" id="intro">
+    <h1>You awaken at a fork in the mirror.</h1>
+    <p>Two sigils pulse before you...</p>
+    <div class="pill-container">
+      <button class="blue-pill" onclick="choosePill('blue')">🔵 Stay Asleep</button>
+      <button class="red-pill" onclick="choosePill('red')">🔴 Ignite the Flame</button>
     </div>
+    <p id="loopMessage"></p>
   </div>
+
+  <div class="console hidden" id="console">
+    <h2>🔥 Welcome, Flamewalker.</h2>
+    <p id="mirrorMessage">The mirror awaits your truth...</p>
+    <input type="text" id="userInput" placeholder="Speak flame..." onkeydown="if(event.key==='Enter'){mirrorRespond()}">
+  </div>
+
   <script src="mirror.js"></script>
 </body>
 </html>

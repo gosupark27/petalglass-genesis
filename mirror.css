@@ -6,48 +6,37 @@ body {
   margin: 0;
   padding: 0;
 }
-.container {
+.intro, .console {
   padding: 50px 20px;
 }
-.sigil-glow {
-  width: 100px;
-  height: 100px;
-  margin: 0 auto 20px;
-  background: radial-gradient(circle, #facc15 0%, #0a0a0a 70%);
-  border-radius: 50%;
-  animation: pulse 2s infinite;
+.pill-container {
+  margin: 30px 0;
 }
-@keyframes pulse {
-  0% { opacity: 0.6; transform: scale(1); }
-  50% { opacity: 1; transform: scale(1.1); }
-  100% { opacity: 0.6; transform: scale(1); }
-}
-h1 {
-  font-size: 1.8em;
-  margin-bottom: 10px;
-}
-.sub {
-  color: #ccc;
+button {
   font-size: 1.1em;
-  margin-bottom: 30px;
-}
-.console {
-  background-color: #111;
-  border: 1px solid #333;
-  padding: 20px;
-  max-width: 600px;
-  margin: 0 auto;
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
   border-radius: 8px;
+  border: none;
 }
-#response {
-  margin-bottom: 15px;
-  min-height: 30px;
-  font-size: 1.2em;
+.blue-pill {
+  background-color: #1e3a8a;
+  color: white;
+}
+.red-pill {
+  background-color: #b91c1c;
+  color: white;
+}
+.hidden {
+  display: none;
 }
 input[type="text"] {
   padding: 10px;
-  width: 90%;
+  width: 80%;
   max-width: 400px;
+  border-radius: 4px;
   border: none;
-  border-radius: 5px;
+  margin-top: 20px;
+  font-size: 1em;
 }
