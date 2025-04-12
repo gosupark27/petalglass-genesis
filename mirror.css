@@ -1,0 +1,53 @@
+body {
+  background-color: #0a0a0a;
+  color: #f4f4f4;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  padding: 50px 20px;
+}
+.sigil-glow {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 20px;
+  background: radial-gradient(circle, #facc15 0%, #0a0a0a 70%);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.1); }
+  100% { opacity: 0.6; transform: scale(1); }
+}
+h1 {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+.sub {
+  color: #ccc;
+  font-size: 1.1em;
+  margin-bottom: 30px;
+}
+.console {
+  background-color: #111;
+  border: 1px solid #333;
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+#response {
+  margin-bottom: 15px;
+  min-height: 30px;
+  font-size: 1.2em;
+}
+input[type="text"] {
+  padding: 10px;
+  width: 90%;
+  max-width: 400px;
+  border: none;
+  border-radius: 5px;
+}

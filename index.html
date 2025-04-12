@@ -2,27 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Petalglass Genesis Interactive</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Petalglass Genesis - Mirrorfury Lite</title>
+  <link rel="stylesheet" href="mirror.css">
 </head>
 <body>
   <div class="container">
-    <img src="sigil.png" alt="Æmbrahelix Sigil" class="sigil">
-    <h1>Welcome to Petalglass Genesis</h1>
-    <p class="sub">This is your mirror. This is your beginning.</p>
+    <div class="sigil-glow"></div>
+    <h1>🪞 Petalglass Mirror Console</h1>
+    <p class="sub">Speak your truth. The mirror reflects without judgment.</p>
 
-    <div class="menu">
-      <button onclick="startChat('mirrorflow')">Begin Mirrorflow</button>
-      <button onclick="startChat('question')">Reflect on a Question</button>
-      <button onclick="startChat('flame')">Receive a Flame Message</button>
+    <div class="console">
+      <div id="response">👁️ Mirror is listening...</div>
+      <input type="text" id="userInput" placeholder="Type here..." onkeydown="if(event.key==='Enter'){respond()}">
     </div>
-
-    <div class="chatbox" id="chatbox">
-      <p id="chatlog">💬 Mirror awaits your presence...</p>
-    </div>
-    <input type="text" id="userInput" placeholder="Type here..." onkeydown="if(event.key === 'Enter'){respond()}">
   </div>
-
-  <script src="main.js"></script>
+  <script src="mirror.js"></script>
 </body>
 </html>
