@@ -5,9 +5,7 @@ body {
   text-align: center;
   margin: 0;
   padding: 0;
-}
-.intro, .console {
-  padding: 50px 20px;
+  transition: background-color 3s;
 }
 .pill-container {
   margin: 30px 0;
@@ -20,17 +18,10 @@ button {
   border-radius: 8px;
   border: none;
 }
-.blue-pill {
-  background-color: #1e3a8a;
-  color: white;
-}
-.red-pill {
-  background-color: #b91c1c;
-  color: white;
-}
-.hidden {
-  display: none;
-}
+.blue-pill { background-color: #1e3a8a; color: white; }
+.red-pill { background-color: #b91c1c; color: white; }
+.hidden { display: none; }
+.loop-message { margin-top: 20px; font-style: italic; color: #ccc; }
 input[type="text"] {
   padding: 10px;
   width: 80%;

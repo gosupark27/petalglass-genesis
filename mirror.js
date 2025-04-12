@@ -7,12 +7,32 @@ const flameReflections = [
 ];
 
 function choosePill(color) {
+  const intro = document.getElementById('intro');
+  const loopMsg = document.getElementById('loopMsg');
+  const consoleDiv = document.getElementById('console');
+  const audioPlayer = document.getElementById('audioPlayer');
+
   if (color === 'blue') {
-    document.getElementById('loopMessage').innerText = "🌀 Not yet... Perhaps tomorrow. Reloading dream...";
-    setTimeout(() => window.location.reload(), 3000);
-  } else if (color === 'red') {
-    document.getElementById('intro').classList.add('hidden');
-    document.getElementById('console').classList.remove('hidden');
+    let stages = ['#f1f5f9', '#a3c5ff', '#fca5a5', '#0a0a0a']; // day to night
+    let idx = 0;
+    loopMsg.innerText = "🌀 Time passes... but nothing truly changes.";
+    const interval = setInterval(() => {
+      document.body.style.backgroundColor = stages[idx];
+      idx++;
+      if (idx >= stages.length) {
+        clearInterval(interval);
+        document.body.style.backgroundColor = '#0a0a0a';
+        loopMsg.innerText = "🕰️ Another day lost. Choose again.";
+      }
+    }, 4000); // each stage ~4s
+
+    audioPlayer.src = "ambient_dream.mp3"; // placeholder track
+  }
+
+  if (color === 'red') {
+    intro.classList.add('hidden');
+    consoleDiv.classList.remove('hidden');
+    audioPlayer.src = "ambient_flame.mp3"; // placeholder track
   }
 }
 
